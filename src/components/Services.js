@@ -88,7 +88,7 @@ export default function Services(){
           <tr key={s.ServiceCode}>
             <td>{s.ServiceCode}</td>
             <td>{s.ServiceName}</td>
-            <td>₦{parseFloat(s.ServicePrice).toLocaleString()}</td>
+            <td>RWF {parseFloat(s.ServicePrice).toLocaleString()}</td>
             <td>
               <button onClick={()=>edit(s)} className="text-blue-600 mr-2">Edit</button>
               <button onClick={()=>remove(s.ServiceCode)} className="text-red-600">Delete</button>
