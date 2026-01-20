@@ -13,7 +13,6 @@ export default function App(){
   const [user, setUser] = useState(null);
 
   async function handleLogout(){
-    await api.post('/auth/logout');
     setUser(null);
     setPage('login');
   }

@@ -97,7 +97,7 @@ export default function Payments(){
               <td>{p.RecordNumber}</td>
               <td>{p.PlateNumber}</td>
               <td>{p.ServiceName}</td>
-              <td>{p.AmountPaid}</td>
+              <td>RWF {p.AmountPaid}</td>
               <td>{p.ReceivedBy}</td>
               <td>
                 <button onClick={()=>edit(p)} disabled={loading} className="text-blue-600 mr-2 disabled:opacity-50">Edit</button>

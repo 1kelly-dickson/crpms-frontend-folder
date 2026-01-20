@@ -102,10 +102,10 @@ export default function Reports(){
           <div className="overflow-x-auto">
             <table className="w-full text-left border">
               <thead><tr className="bg-gray-50"><th className="p-2">Payment#</th><th className="p-2">Date</th><th className="p-2">Plate</th><th className="p-2">Service</th><th className="p-2">Amount</th><th className="p-2">ReceivedBy</th></tr></thead>
-              <tbody>{dailyRows.map(r=> (<tr key={r.PaymentNumber} className="border-t"><td className="p-2">{r.PaymentNumber}</td><td className="p-2">{r.PaymentDate}</td><td className="p-2">{r.PlateNumber}</td><td className="p-2">{r.ServiceName}</td><td className="p-2">{r.AmountPaid}</td><td className="p-2">{r.ReceivedBy}</td></tr>))}</tbody>
+              <tbody>{dailyRows.map(r=> (<tr key={r.PaymentNumber} className="border-t"><td className="p-2">{r.PaymentNumber}</td><td className="p-2">{r.PaymentDate}</td><td className="p-2">{r.PlateNumber}</td><td className="p-2">{r.ServiceName}</td><td className="p-2">RWF {r.AmountPaid}</td><td className="p-2">{r.ReceivedBy}</td></tr>))}</tbody>
             </table>
           </div>
-          <div className="mt-2 text-right font-semibold">Total: ₦{totalDaily.toLocaleString()}</div>
+          <div className="mt-2 text-right font-semibold">Total: RWF {totalDaily.toLocaleString()}</div>
         </div>
       )}
 
@@ -115,10 +115,10 @@ export default function Reports(){
           <div className="overflow-x-auto">
             <table className="w-full text-left border">
               <thead><tr className="bg-gray-50"><th className="p-2">Payment#</th><th className="p-2">Date</th><th className="p-2">Plate</th><th className="p-2">Service</th><th className="p-2">Amount</th><th className="p-2">ReceivedBy</th></tr></thead>
-              <tbody>{monthlyRows.map(r=> (<tr key={r.PaymentNumber} className="border-t"><td className="p-2">{r.PaymentNumber}</td><td className="p-2">{r.PaymentDate}</td><td className="p-2">{r.PlateNumber}</td><td className="p-2">{r.ServiceName}</td><td className="p-2">{r.AmountPaid}</td><td className="p-2">{r.ReceivedBy}</td></tr>))}</tbody>
+              <tbody>{monthlyRows.map(r=> (<tr key={r.PaymentNumber} className="border-t"><td className="p-2">{r.PaymentNumber}</td><td className="p-2">{r.PaymentDate}</td><td className="p-2">{r.PlateNumber}</td><td className="p-2">{r.ServiceName}</td><td className="p-2">RWF {r.AmountPaid}</td><td className="p-2">{r.ReceivedBy}</td></tr>))}</tbody>
             </table>
           </div>
-          <div className="mt-2 text-right font-semibold">Total: ₦{totalMonthly.toLocaleString()}</div>
+          <div className="mt-2 text-right font-semibold">Total: RWF {totalMonthly.toLocaleString()}</div>
         </div>
       )}
 
@@ -131,7 +131,7 @@ export default function Reports(){
               <div className="text-sm text-gray-600">Total Payments</div>
             </div>
             <div className="border p-4 rounded text-center">
-              <div className="text-2xl font-bold text-green-600">₦{(summary.totalAmount || 0).toLocaleString()}</div>
+              <div className="text-2xl font-bold text-green-600">RWF {(summary.totalAmount || 0).toLocaleString()}</div>
               <div className="text-sm text-gray-600">Total Amount</div>
             </div>
             <div className="border p-4 rounded text-center">
